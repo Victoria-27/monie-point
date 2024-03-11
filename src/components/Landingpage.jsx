@@ -94,21 +94,25 @@ console.log("Destination Array 2:", bar2);
           <img
             src={img1}
             alt=""
+            loading="lazy"
             className="w-[25vw] img md:w-[15vw] absolute z-10 rounded-xl shadow-md img_four border-2 border-blue-400" onClick={() => setCount(2)}
           />
           <img
             src={img4}
             alt=""
+            loading="lazy"
             className="w-[25vw] img md:w-[15vw] absolute z-10 rounded-xl shadow-md img_three border-2 border-green-400"
           />
           <img
             src={img5}
             alt=""
+            loading="lazy"
             className="w-[25vw] img md:w-[15vw] absolute z-10 rounded-xl shadow-md img_two border-2 border-orange-400" 
           />
           <img
             src={img4}
             alt=""
+            loading="lazy"
             className="w-[25vw] img md:w-[15vw] absolute z-10 rounded-xl shadow-md img_one border-2 border-red-400" onClick={() => setCount(2)}
           />
 
@@ -170,9 +174,9 @@ console.log("Destination Array 2:", bar2);
             <button className="base_color mt-1 btnTwo">
               🗃 
             </button>
-            <img src={img1} alt="" className="w-[5rem] rounded-3xl absolute bottom-24 right-[20%] popImg" />
-            <img src={img4} alt="" className="w-[5rem] rounded-3xl absolute top-24 right-[7%] popImg" />
-            <img src={img5} alt="" className="w-[5rem] rounded-3xl absolute bottom-24 left-[7%] popImg" />
+            <img src={img1} loading="lazy" alt="" className="w-[5rem] rounded-3xl absolute bottom-24 right-[20%] popImg" />
+            <img src={img4} loading="lazy" alt="" className="w-[5rem] rounded-3xl absolute top-24 right-[7%] popImg" />
+            <img src={img5} loading="lazy" alt="" className="w-[5rem] rounded-3xl absolute bottom-24 left-[7%] popImg" />
             {/* footer */}
             <div className="footer absolute bottom-1 flex justify-between items-center h-10 text-black text-sm w-screen ">
 
@@ -224,7 +228,7 @@ console.log("Destination Array 2:", bar2);
             <div className="flex h-[100vh] w-[25vw] flex-col justify-between items-center au_scroll_one">
 {bar1.map((mg)=>{
   return(
-    <img src={mg} alt="" className="my-3 w-[90%] h-[40vh] rounded-3xl " />
+    <img src={mg} loading="lazy" alt="" className="my-3 w-[90%] h-[40vh] rounded-3xl " />
 
   )
 })}
@@ -235,7 +239,7 @@ console.log("Destination Array 2:", bar2);
             <div className="flex h-[100vh] w-[25vw] flex-col justify-between items-center  au_scroll_two">
             {bar2.map((mg)=>{
   return(
-    <img src={mg} alt="" className="my-3 w-[90%] h-[40vh] rounded-3xl object-cover" />
+    <img src={mg} loading="lazy" alt="" className="my-3 w-[90%] h-[40vh] rounded-3xl object-cover" />
 
   )
 })}
