@@ -7,7 +7,7 @@ function App() {
   const [count, setCount] = useState(0);
   const [screen, setScreen] = useState(0);
 
-  const Gridarr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 34, 5, 6, 7, 8, 9];
+  const Gridarr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 3,4, 5, 6, 7, 8, 9];
   function transitionGenerator() {
     if (count === 1) {
       return "tansition_one";
@@ -91,22 +91,22 @@ function App() {
         className={`app ${ScreenGEnerator()}  w-screen h-screen overflow-hidden`}
       >
         {count <8 && (
-          <main className={`table ${transitionGenerator()}  bg-amber-200 w-screen h-screen overflow-hidden`}>
+          <main className={`table ${transitionGenerator()}  bg-yellow-50 w-screen h-screen overflow-hidden`}>
             <div className="genbox">
               <div className="icon_1 text-orange-800">
                 {count > 2 ? "↓" : "↑"}
               </div>
-              <div className="icon_2  text-orange-200">
+              <div data-count={count} className="icon_2  text-orange-200">
                 {count !== 0 ? "↓" : "DENTAL"}
               </div>
             </div>
             <div className="gen2 ">
-              <div className="icon_3 text-orange-800">
+              <div data-count={count}  className="icon_3 text-orange-800">
                 {count > 1 ? "↑" : "ASSISTANCE"}
               </div>
               <div className="icon_4">👱 </div>
               <div className="overflow-hidden note_wrapper">
-                <p className="note">WELCOME</p>
+                <p className="note">DENTYTECH</p>
               </div>
             </div>
 

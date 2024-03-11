@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react";
-import img from "../assets/imgTwo.jpg";
+import img1 from "../assets/imgTwo.jpg";
+import img4 from "../assets/man3.jpg";
+import img5 from "../assets/man4.jpg";
+import img6 from "../assets/man5.jpg";
 import Navbar from "./Nav";
 const LandingPg = () => {
   const [count, setCount] = useState(1);
-  const sourceArray = [img,img, img];
+  const sourceArray = [img1,img4, img5];
 
 // Destination arrays
-const bar1 = [img,img, img];
-const bar2 =[img,img, img];
+const bar1 = [img1,img4, img5];
+const bar2 =[img4,img5, img6];
   const pushElements = () => {
     for (let i = 0; i < 100; i++) {
       bar1.push(sourceArray[0]);
@@ -62,10 +65,7 @@ console.log("Destination Array 2:", bar2);
   useEffect(() => {
     play();
   }, []);
-  // useEffect(()=>{
-  //      playScreen()
 
-  // },[])
   const play = () => {
     let i = count;
     const delay = 800;
@@ -92,24 +92,24 @@ console.log("Destination Array 2:", bar2);
             <h1 className="bg_text text-[10vw]">OUR ADVANTAGES</h1>
           </div>
           <img
-            src={img}
+            src={img1}
             alt=""
-            className="w-[25vw] img md:w-[15vw] absolute z-10 rounded-xl shadow-md img_four border-2 border-blue-400"
+            className="w-[25vw] img md:w-[15vw] absolute z-10 rounded-xl shadow-md img_four border-2 border-blue-400" onClick={() => setCount(2)}
           />
           <img
-            src={img}
+            src={img4}
             alt=""
             className="w-[25vw] img md:w-[15vw] absolute z-10 rounded-xl shadow-md img_three border-2 border-green-400"
           />
           <img
-            src={img}
+            src={img5}
             alt=""
-            className="w-[25vw] img md:w-[15vw] absolute z-10 rounded-xl shadow-md img_two border-2 border-orange-400"
+            className="w-[25vw] img md:w-[15vw] absolute z-10 rounded-xl shadow-md img_two border-2 border-orange-400" 
           />
           <img
-            src={img}
+            src={img4}
             alt=""
-            className="w-[25vw] img md:w-[15vw] absolute z-10 rounded-xl shadow-md img_one border-2 border-red-400"
+            className="w-[25vw] img md:w-[15vw] absolute z-10 rounded-xl shadow-md img_one border-2 border-red-400" onClick={() => setCount(2)}
           />
 
           <div className="footer absolute bottom-1 flex justify-between items-center h-10 text-black text-sm w-screen ">
@@ -170,9 +170,9 @@ console.log("Destination Array 2:", bar2);
             <button className="base_color mt-1 btnTwo">
               🗃 
             </button>
-            <img src={img} alt="" className="w-[5rem] rounded-3xl absolute bottom-24 right-[20%] popImg" />
-            <img src={img} alt="" className="w-[5rem] rounded-3xl absolute top-24 right-[7%] popImg" />
-            <img src={img} alt="" className="w-[5rem] rounded-3xl absolute bottom-24 left-[7%] popImg" />
+            <img src={img1} alt="" className="w-[5rem] rounded-3xl absolute bottom-24 right-[20%] popImg" />
+            <img src={img4} alt="" className="w-[5rem] rounded-3xl absolute top-24 right-[7%] popImg" />
+            <img src={img5} alt="" className="w-[5rem] rounded-3xl absolute bottom-24 left-[7%] popImg" />
             {/* footer */}
             <div className="footer absolute bottom-1 flex justify-between items-center h-10 text-black text-sm w-screen ">
 
@@ -235,7 +235,7 @@ console.log("Destination Array 2:", bar2);
             <div className="flex h-[100vh] w-[25vw] flex-col justify-between items-center  au_scroll_two">
             {bar2.map((mg)=>{
   return(
-    <img src={mg} alt="" className="my-3 w-[90%] h-[40vh] rounded-3xl " />
+    <img src={mg} alt="" className="my-3 w-[90%] h-[40vh] rounded-3xl object-cover" />
 
   )
 })}

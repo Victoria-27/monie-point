@@ -2,7 +2,7 @@ const Navbar = () => {
     return (
     <nav className="tran_one absolute z-50 top-5 flex justify-between px-5  w-screen items-center overflow-hidden"> 
    <div className=" btn flex justify-between h-fit ">
-    <p className="rounded-md p-1 text-center border-2 border-black mr-1">More</p>
+    <p className="rounded-md p-1 text-center border-2 border-black mr-1">Menu</p>
     <p className="rounded-md p-1 text-center border-2 border-black"> icon</p>
    </div>
 <div className="logo flex h-10 items-center">
